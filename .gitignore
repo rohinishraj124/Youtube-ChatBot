@@ -13,7 +13,6 @@ ENV/
 
 # Environment variables
 .env
-.env.*
 
 # VS Code
 .vscode/
