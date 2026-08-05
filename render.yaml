@@ -3,8 +3,20 @@ services:
     name: youtube-chatbot
     runtime: python
     rootDir: backend
+
     buildCommand: pip install -r requirements.txt
+
     startCommand: gunicorn app:app
+
     envVars:
       - key: PYTHON_VERSION
-        value: 3.11.10
+        value: "3.11.10"
+
+      - key: GROQ_API_KEY
+        sync: false
+
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile
+
+      - key: EMBEDDING_MODEL
+        value: sentence-transformers/all-MiniLM-L6-v2
