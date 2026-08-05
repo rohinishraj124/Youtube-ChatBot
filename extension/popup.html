@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>YouTube Chat</title>
+<link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <img src="icons/icon48.png" alt="" class="brand-icon" />
+      <div>
+        <h1>Ask this video</h1>
+        <p id="videoStatus" class="video-status">Detecting video…</p>
+      </div>
+    </div>
+  </header>
+
+  <section id="noVideoState" class="empty-state hidden">
+    <p>Open a YouTube video tab, then reopen this popup.</p>
+  </section>
+
+  <section id="indexState" class="index-state">
+    <button id="indexBtn" class="primary-btn">Index this video</button>
+    <p id="indexHint" class="hint"></p>
+  </section>
+
+  <section id="chatState" class="chat-state hidden">
+    <div id="messages" class="messages"></div>
+    <form id="chatForm" class="chat-form">
+      <input
+        id="questionInput"
+        type="text"
+        placeholder="Ask something about the video…"
+        autocomplete="off"
+      />
+      <button type="submit" id="sendBtn" class="send-btn" aria-label="Send">➤</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <span id="serverStatus" class="server-status">●</span>
+    <span class="footer-text">Backend: <code id="serverUrl">localhost:5000</code></span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
