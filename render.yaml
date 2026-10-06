@@ -16,7 +16,7 @@ services:
         sync: false
 
       - key: GROQ_MODEL
-        value: llama-3.3-70b-versatile
+        value: openai/gpt-oss-120b
 
       - key: EMBEDDING_MODEL
         value: sentence-transformers/all-MiniLM-L6-v2
